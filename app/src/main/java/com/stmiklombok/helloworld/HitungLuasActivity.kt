@@ -19,15 +19,17 @@ class HitungLuasActivity : AppCompatActivity() {
 
         initKomponent()
         hitungButton.setOnClickListener {
-            val lebar = lebarEditText.text.toString()
-            val panjang = panjangEditText.text.toString()
+            val lebar = lebarEditText.text.toString() // 2
+            val panjang = panjangEditText.text.toString() //10
+            val hasil = panjang.toInt() * lebar.toInt()
+            hasilTextView.text = hasil.toString() + " m2"
 
-            if (panjang.isEmpty() && lebar.isEmpty()) {
-                hasilTextView.text = "inputan tidak boleh kosong"
-            } else {
-                val hasil = panjang.toInt() * lebar.toInt()
-                hasilTextView.text = hasil.toString() + " m2"
-            }
+//            if (panjang.isEmpty() && lebar.isEmpty()) {
+//                hasilTextView.text = "inputan tidak boleh kosong"
+//            } else {
+//                val hasil = panjang.toInt() * lebar.toInt()
+//                hasilTextView.text = hasil.toString() + " m2"
+//            }
         }
 
     }
@@ -38,4 +40,7 @@ class HitungLuasActivity : AppCompatActivity() {
         hitungButton = findViewById(R.id.hitungButton)
         hasilTextView = findViewById(R.id.hasilTextView)
     }
+
+
 }
+
