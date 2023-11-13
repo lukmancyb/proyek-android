@@ -1,29 +1,30 @@
 package com.stmiklombok.helloworld
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
+import com.stmiklombok.helloworld.databinding.ActivityHitungLuasBinding
 
 class HitungLuasActivity : AppCompatActivity() {
-
-    private lateinit var lebarEditText: TextInputEditText
-    private lateinit var panjangEditText: TextInputEditText
-    private lateinit var hitungButton: Button
-    private lateinit var hasilTextView: TextView
-
+    private lateinit var binding : ActivityHitungLuasBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hitung_luas)
+        binding = ActivityHitungLuasBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        initKomponent()
-        hitungButton.setOnClickListener {
-            val lebar = lebarEditText.text.toString() // 2
-            val panjang = panjangEditText.text.toString() //10
+        binding.pindahHalaman.setOnClickListener {
+            val move = Intent(this, MainActivity::class.java)
+            startActivity(move)
+        }
+
+        binding.hitungButton.setOnClickListener {
+            val lebar = binding.lebarEditText.text.toString() // 2
+            val panjang = binding.panjangEditText.text.toString() //10
             val hasil = panjang.toInt() * lebar.toInt()
-            hasilTextView.text = hasil.toString() + " m2"
-
+             binding.hasilTextView.text = hasil.toString() + " m2"
 //            if (panjang.isEmpty() && lebar.isEmpty()) {
 //                hasilTextView.text = "inputan tidak boleh kosong"
 //            } else {
@@ -31,16 +32,6 @@ class HitungLuasActivity : AppCompatActivity() {
 //                hasilTextView.text = hasil.toString() + " m2"
 //            }
         }
-
     }
-
-    private fun initKomponent() {
-        lebarEditText = findViewById(R.id.lebarEditText)
-        panjangEditText = findViewById(R.id.panjangEditText)
-        hitungButton = findViewById(R.id.hitungButton)
-        hasilTextView = findViewById(R.id.hasilTextView)
-    }
-
-
 }
 
