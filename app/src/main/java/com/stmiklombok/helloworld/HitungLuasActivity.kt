@@ -1,12 +1,10 @@
 package com.stmiklombok.helloworld
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import com.google.android.material.textfield.TextInputEditText
+import androidx.appcompat.app.AppCompatActivity
 import com.stmiklombok.helloworld.databinding.ActivityHitungLuasBinding
+
 
 class HitungLuasActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHitungLuasBinding
