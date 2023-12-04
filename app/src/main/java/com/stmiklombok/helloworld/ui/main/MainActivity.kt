@@ -1,11 +1,17 @@
-package com.stmiklombok.helloworld
+package com.stmiklombok.helloworld.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.stmiklombok.helloworld.data.Book
+import com.stmiklombok.helloworld.R
+import com.stmiklombok.helloworld.ui.ListBookAdapter
+import com.stmiklombok.helloworld.ui.RecyclerViewClickListener
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), RecyclerViewClickListener {
 
     private lateinit var rvBooks: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,8 +21,9 @@ class MainActivity : AppCompatActivity() {
         rvBooks.setHasFixedSize(true)
 
         rvBooks.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = ListBookAdapter(listBook)
-        rvBooks.adapter = listHeroAdapter
+        val listBookAdapter = ListBookAdapter(listBook)
+        rvBooks.adapter = listBookAdapter
+        listBookAdapter.listener = this
     }
 
     private val listBook: ArrayList<Book>
@@ -31,4 +38,11 @@ class MainActivity : AppCompatActivity() {
             }
             return listBook
         }
+
+    override fun onItemClicked(view: View, book: Book) {
+        Toast.makeText(this, "Hallo ${book.name}", Toast.LENGTH_LONG).show()
+
+    }
+
+
 }
