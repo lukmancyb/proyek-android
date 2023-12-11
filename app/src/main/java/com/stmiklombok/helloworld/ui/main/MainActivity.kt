@@ -1,5 +1,6 @@
 package com.stmiklombok.helloworld.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import com.stmiklombok.helloworld.data.Book
 import com.stmiklombok.helloworld.R
 import com.stmiklombok.helloworld.ui.ListBookAdapter
 import com.stmiklombok.helloworld.ui.RecyclerViewClickListener
+import com.stmiklombok.helloworld.ui.detail.DetailActivity
 
 class MainActivity : AppCompatActivity(), RecyclerViewClickListener {
 
@@ -40,7 +42,9 @@ class MainActivity : AppCompatActivity(), RecyclerViewClickListener {
         }
 
     override fun onItemClicked(view: View, book: Book) {
-        Toast.makeText(this, "Hallo ${book.name}", Toast.LENGTH_LONG).show()
+        val intentDetail = Intent(this, DetailActivity::class.java)
+        intentDetail.putExtra("extra_detail", book)
+        startActivity(intentDetail)
 
     }
 

@@ -3,7 +3,7 @@
 
     <string name="book_name">Nama Buku</string>
     <string name="description">Deskripsi</string>
-    
+
     <string-array name="data_name">
         <item>Kecerdasan Emosional – Daniel Goleman</item>
         <item>Almost Adulting: Self-Help Approach to Deal With Quarter-Life Crisis – NADHIRA AFIFA</item>
@@ -31,7 +31,7 @@
         <item>Buku yang Anda pegang saat ini ditulis dengan satu asumsi optimis: Ego Anda bukanlah kekuatan yang harus Anda puaskan pada setiap kesempatan. Ego dapat diatur. Ego dapat diarahkan. Dalam buku ini, kita akan melihat orang-orang, seperti William Tecumseh Sherman, Katharine Graham, Jackie Robinson, Eleanor Roosevelt, Bill Walsh, Benjamin Franklin, Belisarius, Angela Merkel, dan George C. Marshall.</item>
         <item>Lebih dari 2000 tahun lalu, sebuah mazhab filsafat menemukan akar masalah dan juga solusi dari banyak emosi negatif. Stoisisme, atau Filosofi Teras, adalah filsafat Yunani-Romawi kuno yang bisa membantu kita mengatasi emosi negatif dan menghasilkan mental yang tangguh dalam menghadapi naik-turun nya kehidupan. Jauh dari kesan filsafat sebagai topik berat dan mengawang-awang, Filosofi Teras justru bersifat praktis dan relevan dengan kehidupan Generasi Milenial dan Gen-Z masa kini.</item>
     </string-array>
-    
+
     <string-array name="data_photo">
         <item>https://cdn.gramedia.com/uploads/items/img20220831_12081251.jpg</item>
         <item>https://cdn.gramedia.com/uploads/items/Almost_Adulting_C_1_4_page-0001.jpg</item>
