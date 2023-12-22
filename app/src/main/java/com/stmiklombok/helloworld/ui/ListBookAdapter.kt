@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.stmiklombok.helloworld.data.Book
 import com.stmiklombok.helloworld.R
 
-class ListBookAdapter(private val listBook: ArrayList<Book>)
+class ListBookAdapter(private val listBook: List<Book>)
     : RecyclerView.Adapter<ListBookAdapter.ListViewHolder>() {
 
     var listener : RecyclerViewClickListener? = null

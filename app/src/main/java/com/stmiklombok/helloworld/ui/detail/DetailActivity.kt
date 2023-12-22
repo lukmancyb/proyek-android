@@ -14,7 +14,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         // fungsi untuk menerima data intent yang dikirim
-        val dataIntent =  
+        val dataIntent = intent.getParcelableExtra<Book>("extra_detail")
         //inisiasi view
         val image = findViewById<ImageView>(R.id.detailImage)
         val title = findViewById<TextView>(R.id.textJudul)
